@@ -1,4 +1,4 @@
-import assets from "../assets/assets"
+import assets, { userDummyData } from "../assets/assets"
 import { useNavigate } from 'react-router-dom'
 
 const Sidebar = ({ selectedUser, setSelectedUser }) => {
@@ -33,6 +33,28 @@ const Sidebar = ({ selectedUser, setSelectedUser }) => {
                 </div>
 
 
+
+            </div>
+
+            <div className="flex flex-col">
+                {
+                    userDummyData.map( (user,index)=>(
+                        <div> 
+                            <img className="w-[35px] aspect-[1/1] rounded-full" src={user?.profilePic || assets.avatar_icon} alt="" />
+
+                            <div className="flex flex-col leading-5">
+                                <p>{user.fullName}</p>
+
+                                {
+                                    index<3
+                                    ? <span>Online</span>
+                                    : <span>Ofline</span>
+                                }
+
+                            </div>
+                        </div>
+                    ))
+                }
 
             </div>
 
