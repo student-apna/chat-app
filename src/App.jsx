@@ -1,8 +1,8 @@
-import React from 'react'
+
 
 const App = () => {
   return (
-    <div>App</div>
+    <div className=' flex  bg-blue-500 h-50 w-50'>App</div>
   )
 }
 
