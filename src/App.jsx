@@ -1,8 +1,21 @@
+import { Route,Routes } from "react-router-dom"
+import HomePage from "./pages/HomePage"
+import LoginPage from "./pages/LoginPage"
+import ProfilePage from "./pages/ProfilePage"
 
 
 const App = () => {
   return (
-    <div className=' flex  bg-blue-500 h-50 w-50'>App</div>
+    <div >
+
+      <Routes>
+        <Route path="/" element={<HomePage/>}/>
+        <Route path="/login" element={<LoginPage/>}/>
+        <Route path="/profile" element={<ProfilePage/>}/>
+
+      </Routes>
+      
+    </div>
   )
 }
 
